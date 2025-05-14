@@ -1,0 +1,13 @@
+usage: main.py [-h] [--lr LR] [--num_epochs NUM_EPOCHS] [--k K]
+               [--win_size WIN_SIZE] [--input_c INPUT_C] [--output_c OUTPUT_C]
+               [--batch_size BATCH_SIZE] [--pretrained_model PRETRAINED_MODEL]
+               [--dataset DATASET] [--mode {train,test}]
+               [--data_path DATA_PATH] [--model_save_path MODEL_SAVE_PATH]
+               [--anormly_ratio ANORMLY_RATIO] [--d_model D_MODEL]
+               [--e_layers E_LAYERS] [--n_heads N_HEADS] [--d_ff D_FF]
+               [--model_type MODEL_TYPE] [--gnn_type GNN_TYPE]
+               [--gnn_hidden GNN_HIDDEN] [--gnn_layers GNN_LAYERS]
+               [--gnn_heads GNN_HEADS] [--k_neighbors K_NEIGHBORS]
+               [--fusion_method FUSION_METHOD] [--dynamic_graph DYNAMIC_GRAPH]
+               [--residual RESIDUAL]
+main.py: error: unrecognized arguments: --amp True --num_workers 4 --pin_memory True

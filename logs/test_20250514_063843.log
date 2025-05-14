@@ -1,0 +1,66 @@
+------------ Options -------------
+anormly_ratio: 4.0
+batch_size: 128
+d_ff: 32
+d_model: 32
+data_path: ./dataset/SWaT
+dataset: SWaT
+dynamic_graph: True
+e_layers: 1
+fusion_method: add
+gnn_heads: 1
+gnn_hidden: 32
+gnn_layers: 1
+gnn_type: gatv2
+input_c: 51
+k: 3
+k_neighbors: 2
+lr: 0.0001
+mode: test
+model_save_path: ./checkpoints
+model_type: advanced_transgnn
+n_heads: 2
+no_time_limit: False
+num_epochs: 10
+output_c: 51
+pretrained_model: None
+residual: True
+win_size: 50
+-------------- End ----------------
+自动调整batch_size: 128 -> 1024 (GPU内存: 23.59GB可用)
+当前GPU利用率: 0.00%，目标提高到60-80%
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+检测到大显存GPU (23.6GB)，自动优化模型参数
+已强制启用自动混合精度训练，提高GPU利用率
+使用单GPU训练 - RTX 3090
+模型总参数量: 3.72M 参数
+初始GPU内存分配: 0.03GB
+初始GPU内存预留: 0.04GB
+已设置GPU内存使用上限为95%
+CUDA性能优化设置完成，已针对RTX 3090进行优化
+======================TEST MODE======================
+清除缓存
+计算训练集统计信息...
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+处理训练集:   0%|          | 0/484 [00:00<?, ?it/s]处理训练集:   0%|          | 1/484 [00:10<1:23:56, 10.43s/it]处理训练集:   0%|          | 2/484 [00:21<1:28:21, 11.00s/it]处理训练集:   0%|          | 2/484 [00:25<1:42:07, 12.71s/it]
+测试过程中发生错误：CUDA out of memory. Tried to allocate 2.00 MiB (GPU 0; 23.59 GiB total capacity; 16.85 GiB already allocated; 2.69 MiB free; 22.41 GiB allowed; 17.00 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

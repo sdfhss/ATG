@@ -1,0 +1,304 @@
+root@autodl-container-63de429c1f-ac523e14:~/autodl-tmp/Anomaly-Transformer-main# bash ./scripts/SMAP.sh
+------------ Options -------------
+anormly_ratio: 1.0
+batch_size: 256
+data_path: dataset/SMAP
+dataset: SMAP
+input_c: 25
+k: 3
+lr: 0.0001
+mode: train
+model_save_path: checkpoints
+num_epochs: 3
+output_c: 25
+pretrained_model: None
+win_size: 100
+-------------- End ----------------
+test: (427617, 25)
+train: (135183, 25)
+test: (427617, 25)
+train: (135183, 25)
+test: (427617, 25)
+train: (135183, 25)
+test: (427617, 25)
+train: (135183, 25)
+======================TRAIN MODE======================
+        speed: 0.1693s/iter; left time: 251.3776s
+        speed: 0.1691s/iter; left time: 234.2685s
+        speed: 0.1689s/iter; left time: 217.0066s
+        speed: 0.1696s/iter; left time: 200.9233s
+        speed: 0.1699s/iter; left time: 184.2922s
+Epoch: 1 cost time: 89.47725224494934
+Epoch: 1, Steps: 528 | Train Loss: -44.6444958 Vali Loss: -47.3351111 
+Validation loss decreased (inf --> -47.335111).  Saving model ...
+Updating learning rate to 0.0001
+        speed: 1.1629s/iter; left time: 1112.8859s
+        speed: 0.1702s/iter; left time: 145.8354s
+        speed: 0.1702s/iter; left time: 128.8519s
+        speed: 0.1701s/iter; left time: 111.7378s
+        speed: 0.1701s/iter; left time: 94.7624s
+Epoch: 2 cost time: 89.73010683059692
+Epoch: 2, Steps: 528 | Train Loss: -47.9880872 Vali Loss: -47.9016105 
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+        speed: 1.1649s/iter; left time: 499.7441s
+        speed: 0.1702s/iter; left time: 55.9852s
+        speed: 0.1702s/iter; left time: 38.9731s
+        speed: 0.1702s/iter; left time: 21.9615s
+        speed: 0.1702s/iter; left time: 4.9355s
+Epoch: 3 cost time: 89.75919890403748
+Epoch: 3, Steps: 528 | Train Loss: -48.2676302 Vali Loss: -48.0027720 
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+------------ Options -------------
+anormly_ratio: 1.0
+batch_size: 256
+data_path: dataset/SMAP
+dataset: SMAP
+input_c: 25
+k: 3
+lr: 0.0001
+mode: test
+model_save_path: checkpoints
+num_epochs: 10
+output_c: 25
+pretrained_model: 20
+win_size: 100
+-------------- End ----------------
+test: (427617, 25)
+train: (135183, 25)
+test: (427617, 25)
+train: (135183, 25)
+test: (427617, 25)
+train: (135183, 25)
+test: (427617, 25)
+train: (135183, 25)
+======================TEST MODE======================
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+Threshold : 0.0007102322217542513
+pred:    (427600,)
+gt:      (427600,)
+pred:  (427600,)
+gt:    (427600,)
+Accuracy : 0.9907, Precision : 0.9383, Recall : 0.9922, F-score : 0.9645 
+
+
+root@autodl-container-63de429c1f-ac523e14:~/autodl-tmp/Anomaly-Transformer-main# bash ./scripts/MSL.sh
+------------ Options -------------
+anormly_ratio: 1.0
+batch_size: 256
+data_path: dataset/MSL
+dataset: MSL
+input_c: 55
+k: 3
+lr: 0.0001
+mode: train
+model_save_path: checkpoints
+num_epochs: 3
+output_c: 55
+pretrained_model: None
+win_size: 100
+-------------- End ----------------
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+======================TRAIN MODE======================
+        speed: 0.1710s/iter; left time: 100.0226s
+        speed: 0.1704s/iter; left time: 82.6331s
+Epoch: 1 cost time: 39.01956295967102
+Epoch: 1, Steps: 228 | Train Loss: -42.0120204 Vali Loss: -45.6583920 
+Validation loss decreased (inf --> -45.658392).  Saving model ...
+Updating learning rate to 0.0001
+        speed: 0.3823s/iter; left time: 136.4970s
+        speed: 0.1708s/iter; left time: 43.9054s
+Epoch: 2 cost time: 38.81525540351868
+Epoch: 2, Steps: 228 | Train Loss: -47.6866055 Vali Loss: -46.2381656 
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+        speed: 0.3823s/iter; left time: 49.3216s
+        speed: 0.1711s/iter; left time: 4.9628s
+Epoch: 3 cost time: 38.89305853843689
+Epoch: 3, Steps: 228 | Train Loss: -47.9867523 Vali Loss: -46.4309720 
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+------------ Options -------------
+anormly_ratio: 1.0
+batch_size: 256
+data_path: dataset/MSL
+dataset: MSL
+input_c: 55
+k: 3
+lr: 0.0001
+mode: test
+model_save_path: checkpoints
+num_epochs: 10
+output_c: 55
+pretrained_model: 20
+win_size: 100
+-------------- End ----------------
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+======================TEST MODE======================
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+Threshold : 0.00534478649962671
+pred:    (73700,)
+gt:      (73700,)
+pred:  (73700,)
+gt:    (73700,)
+Accuracy : 0.9850, Precision : 0.9173, Recall : 0.9431, F-score : 0.9300 
+
+root@autodl-container-63de429c1f-ac523e14:~/autodl-tmp/Anomaly-Transformer-main# bash ./scripts/SMD.sh
+------------ Options -------------
+anormly_ratio: 0.5
+batch_size: 256
+data_path: dataset/SMD
+dataset: SMD
+input_c: 38
+k: 3
+lr: 0.0001
+mode: train
+model_save_path: checkpoints
+num_epochs: 10
+output_c: 38
+pretrained_model: None
+win_size: 100
+-------------- End ----------------
+======================TRAIN MODE======================
+Epoch: 1 cost time: 4.826757192611694
+Epoch: 1, Steps: 28 | Train Loss: -21.7425724 Vali Loss: -22.9321900 
+Validation loss decreased (inf --> -22.932190).  Saving model ...
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 4.625455141067505
+Epoch: 2, Steps: 28 | Train Loss: -31.9834888 Vali Loss: -39.2046028 
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 4.630250453948975
+Epoch: 3, Steps: 28 | Train Loss: -41.5653932 Vali Loss: -41.7201079 
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 4.641442060470581
+Epoch: 4, Steps: 28 | Train Loss: -43.0218555 Vali Loss: -42.3706724 
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------ Options -------------
+anormly_ratio: 0.5
+batch_size: 256
+data_path: dataset/SMD
+dataset: SMD
+input_c: 38
+k: 3
+lr: 0.0001
+mode: test
+model_save_path: checkpoints
+num_epochs: 10
+output_c: 38
+pretrained_model: 20
+win_size: 100
+-------------- End ----------------
+======================TEST MODE======================
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+Threshold : 0.13379812225699392
+pred:    (708400,)
+gt:      (708400,)
+pred:  (708400,)
+gt:    (708400,)
+Accuracy : 0.9921, Precision : 0.8903, Recall : 0.9229, F-score : 0.9063 
+
+root@autodl-container-63de429c1f-ac523e14:~/autodl-tmp/Anomaly-Transformer-main# bash ./scripts/PSM.sh
+------------ Options -------------
+anormly_ratio: 1.0
+batch_size: 256
+data_path: dataset/PSM
+dataset: PSM
+input_c: 25
+k: 3
+lr: 0.0001
+mode: train
+model_save_path: checkpoints
+num_epochs: 3
+output_c: 25
+pretrained_model: None
+win_size: 100
+-------------- End ----------------
+test: (87841, 25)
+train: (132481, 25)
+test: (87841, 25)
+train: (132481, 25)
+test: (87841, 25)
+train: (132481, 25)
+test: (87841, 25)
+train: (132481, 25)
+======================TRAIN MODE======================
+        speed: 0.1697s/iter; left time: 246.8653s
+        speed: 0.1694s/iter; left time: 229.5476s
+        speed: 0.1692s/iter; left time: 212.3101s
+        speed: 0.1696s/iter; left time: 195.8616s
+        speed: 0.1697s/iter; left time: 179.0568s
+Epoch: 1 cost time: 87.82314968109131
+Epoch: 1, Steps: 518 | Train Loss: -45.0204230 Vali Loss: -47.9573324 
+Validation loss decreased (inf --> -47.957332).  Saving model ...
+Updating learning rate to 0.0001
+        speed: 0.3956s/iter; left time: 370.6803s
+        speed: 0.1700s/iter; left time: 142.3133s
+        speed: 0.1700s/iter; left time: 125.3110s
+        speed: 0.1700s/iter; left time: 108.3205s
+        speed: 0.1701s/iter; left time: 91.3353s
+Epoch: 2 cost time: 87.94243001937866
+Epoch: 2, Steps: 518 | Train Loss: -48.3182865 Vali Loss: -48.5221598 
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 5e-05
+        speed: 0.3951s/iter; left time: 165.5262s
+        speed: 0.1701s/iter; left time: 54.2710s
+        speed: 0.1702s/iter; left time: 37.2665s
+        speed: 0.1702s/iter; left time: 20.2481s
+        speed: 0.1702s/iter; left time: 3.2334s
+Epoch: 3 cost time: 87.99873805046082
+Epoch: 3, Steps: 518 | Train Loss: -48.7052979 Vali Loss: -48.7421307 
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 2.5e-05
+------------ Options -------------
+anormly_ratio: 1.0
+batch_size: 256
+data_path: dataset/PSM
+dataset: PSM
+input_c: 25
+k: 3
+lr: 0.0001
+mode: test
+model_save_path: checkpoints
+num_epochs: 10
+output_c: 25
+pretrained_model: 20
+win_size: 100
+-------------- End ----------------
+test: (87841, 25)
+train: (132481, 25)
+test: (87841, 25)
+train: (132481, 25)
+test: (87841, 25)
+train: (132481, 25)
+test: (87841, 25)
+train: (132481, 25)
+======================TEST MODE======================
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+Threshold : 0.004179900088347442
+pred:    (87800,)
+gt:      (87800,)
+pred:  (87800,)
+gt:    (87800,)
+Accuracy : 0.9849, Precision : 0.9720, Recall : 0.9738, F-score : 0.9729

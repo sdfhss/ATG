@@ -1,0 +1,54 @@
+------------ Options -------------
+anormly_ratio: 4.0
+batch_size: 128
+d_ff: 128
+d_model: 128
+data_path: ./dataset/SWaT
+dataset: SWaT
+dynamic_graph: True
+e_layers: 2
+fusion_method: weighted
+gnn_heads: 2
+gnn_hidden: 64
+gnn_layers: 2
+gnn_type: gatv2
+input_c: 51
+k: 3
+k_neighbors: 3
+lr: 0.0001
+mode: train
+model_save_path: ./checkpoints
+model_type: advanced_transgnn
+n_heads: 4
+num_epochs: 5
+output_c: 51
+pretrained_model: None
+residual: True
+win_size: 50
+-------------- End ----------------
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+======================TRAIN MODE======================
+预热GPU...
+
+开始第 1/5 轮训练
+总批次数: 3867
+Epoch 1/5:   0%|          | 0/3867 [00:00<?, ?it/s]Epoch 1/5:   0%|          | 0/3867 [00:10<?, ?it/s, loss=-23.2538, speed=11.64s/iter, memory=80MB]Epoch 1/5:   0%|          | 1/3867 [00:10<11:14:29, 10.47s/it, loss=-23.2538, speed=11.64s/iter, memory=80MB]Epoch 1/5:   0%|          | 1/3867 [00:20<11:14:29, 10.47s/it, loss=-23.7044, speed=11.06s/iter, memory=83MB]Epoch 1/5:   0%|          | 2/3867 [00:20<11:14:55, 10.48s/it, loss=-23.7044, speed=11.06s/iter, memory=83MB]Epoch 1/5:   0%|          | 2/3867 [00:31<11:14:55, 10.48s/it, loss=-23.1008, speed=10.81s/iter, memory=83MB]Epoch 1/5:   0%|          | 3/3867 [00:31<11:09:31, 10.40s/it, loss=-23.1008, speed=10.81s/iter, memory=83MB]Epoch 1/5:   0%|          | 3/3867 [00:41<11:09:31, 10.40s/it, loss=-23.5112, speed=10.68s/iter, memory=83MB]Epoch 1/5:   0%|          | 4/3867 [00:41<11:06:22, 10.35s/it, loss=-23.5112, speed=10.68s/iter, memory=83MB]Epoch 1/5:   0%|          | 4/3867 [00:51<11:06:22, 10.35s/it, loss=-23.2434, speed=10.59s/iter, memory=82MB]Epoch 1/5:   0%|          | 5/3867 [00:51<11:03:48, 10.31s/it, loss=-23.2434, speed=10.59s/iter, memory=82MB]Epoch 1/5:   0%|          | 5/3867 [01:02<11:03:48, 10.31s/it, loss=-23.4045, speed=10.56s/iter, memory=83MB]Epoch 1/5:   0%|          | 6/3867 [01:02<11:05:57, 10.35s/it, loss=-23.4045, speed=10.56s/iter, memory=83MB]Epoch 1/5:   0%|          | 6/3867 [01:12<11:05:57, 10.35s/it, loss=-23.0290, speed=10.53s/iter, memory=83MB]Epoch 1/5:   0%|          | 7/3867 [01:12<11:06:18, 10.36s/it, loss=-23.0290, speed=10.53s/iter, memory=83MB]Epoch 1/5:   0%|          | 7/3867 [01:22<11:06:18, 10.36s/it, loss=-22.8895, speed=10.52s/iter, memory=83MB]Epoch 1/5:   0%|          | 8/3867 [01:22<11:06:37, 10.36s/it, loss=-22.8895, speed=10.52s/iter, memory=83MB]Epoch 1/5:   0%|          | 8/3867 [01:33<11:06:37, 10.36s/it, loss=-23.1548, speed=10.48s/iter, memory=83MB]Epoch 1/5:   0%|          | 9/3867 [01:33<11:03:15, 10.32s/it, loss=-23.1548, speed=10.48s/iter, memory=83MB]Epoch 1/5:   0%|          | 9/3867 [01:43<11:03:15, 10.32s/it, loss=-22.4364, speed=10.46s/iter, memory=83MB]Epoch 1/5:   0%|          | 10/3867 [01:43<11:03:00, 10.31s/it, loss=-22.4364, speed=10.46s/iter, memory=83MB]Epoch 1/5:   0%|          | 10/3867 [01:53<11:03:00, 10.31s/it, loss=-22.8661, speed=10.45s/iter, memory=83MB]Epoch 1/5:   0%|          | 11/3867 [01:53<11:03:01, 10.32s/it, loss=-22.8661, speed=10.45s/iter, memory=83MB]Epoch 1/5:   0%|          | 11/3867 [02:03<11:03:01, 10.32s/it, loss=-22.1044, speed=10.40s/iter, memory=83MB]Epoch 1/5:   0%|          | 12/3867 [02:03<10:52:15, 10.15s/it, loss=-22.1044, speed=10.40s/iter, memory=83MB]Epoch 1/5:   0%|          | 12/3867 [02:13<10:52:15, 10.15s/it, loss=-22.5902, speed=10.39s/iter, memory=82MB]Epoch 1/5:   0%|          | 13/3867 [02:13<10:56:01, 10.21s/it, loss=-22.5902, speed=10.39s/iter, memory=82MB]Epoch 1/5:   0%|          | 13/3867 [02:24<10:56:01, 10.21s/it, loss=-21.4776, speed=10.38s/iter, memory=84MB]Epoch 1/5:   0%|          | 14/3867 [02:24<10:56:30, 10.22s/it, loss=-21.4776, speed=10.38s/iter, memory=84MB]Epoch 1/5:   0%|          | 14/3867 [02:34<10:56:30, 10.22s/it, loss=-22.4493, speed=10.37s/iter, memory=83MB]Epoch 1/5:   0%|          | 15/3867 [02:34<10:55:22, 10.21s/it, loss=-22.4493, speed=10.37s/iter, memory=83MB]Epoch 1/5:   0%|          | 15/3867 [02:44<10:55:22, 10.21s/it, loss=-22.4171, speed=10.33s/iter, memory=83MB]Epoch 1/5:   0%|          | 16/3867 [02:44<10:46:39, 10.08s/it, loss=-22.4171, speed=10.33s/iter, memory=83MB]Epoch 1/5:   0%|          | 16/3867 [02:54<10:46:39, 10.08s/it, loss=-21.8991, speed=10.30s/iter, memory=82MB]Epoch 1/5:   0%|          | 17/3867 [02:54<10:43:06, 10.02s/it, loss=-21.8991, speed=10.30s/iter, memory=82MB]Epoch 1/5:   0%|          | 17/3867 [03:03<10:43:06, 10.02s/it, loss=-21.9156, speed=10.28s/iter, memory=83MB]Epoch 1/5:   0%|          | 18/3867 [03:03<10:39:20,  9.97s/it, loss=-21.9156, speed=10.28s/iter, memory=83MB]Epoch 1/5:   0%|          | 18/3867 [03:13<10:39:20,  9.97s/it, loss=-22.0783, speed=10.26s/iter, memory=82MB]Epoch 1/5:   0%|          | 19/3867 [03:13<10:37:53,  9.95s/it, loss=-22.0783, speed=10.26s/iter, memory=82MB]Epoch 1/5:   0%|          | 19/3867 [03:23<10:37:53,  9.95s/it, loss=-21.9453, speed=10.23s/iter, memory=83MB]Epoch 1/5:   1%|          | 20/3867 [03:23<10:32:17,  9.86s/it, loss=-21.9453, speed=10.23s/iter, memory=83MB]Epoch 1/5:   1%|          | 20/3867 [03:33<10:32:17,  9.86s/it, loss=-22.0545, speed=10.23s/iter, memory=83MB]Epoch 1/5:   1%|          | 21/3867 [03:33<10:38:19,  9.96s/it, loss=-22.0545, speed=10.23s/iter, memory=83MB]Epoch 1/5:   1%|          | 21/3867 [03:43<10:38:19,  9.96s/it, loss=-21.6620, speed=10.21s/iter, memory=82MB]Epoch 1/5:   1%|          | 22/3867 [03:43<10:37:27,  9.95s/it, loss=-21.6620, speed=10.21s/iter, memory=82MB]Epoch 1/5:   1%|          | 22/3867 [03:53<10:37:27,  9.95s/it, loss=-22.1372, speed=10.19s/iter, memory=82MB]Epoch 1/5:   1%|          | 23/3867 [03:53<10:33:35,  9.89s/it, loss=-22.1372, speed=10.19s/iter, memory=82MB]Epoch 1/5:   1%|          | 23/3867 [04:03<10:33:35,  9.89s/it, loss=-21.7587, speed=10.18s/iter, memory=82MB]Epoch 1/5:   1%|          | 24/3867 [04:03<10:32:44,  9.88s/it, loss=-21.7587, speed=10.18s/iter, memory=82MB]Epoch 1/5:   1%|          | 24/3867 [04:13<10:32:44,  9.88s/it, loss=-21.9936, speed=10.17s/iter, memory=82MB]Epoch 1/5:   1%|          | 25/3867 [04:13<10:34:03,  9.90s/it, loss=-21.9936, speed=10.17s/iter, memory=82MB]Epoch 1/5:   1%|          | 25/3867 [04:22<10:34:03,  9.90s/it, loss=-21.7505, speed=10.16s/iter, memory=83MB]Epoch 1/5:   1%|          | 26/3867 [04:22<10:31:46,  9.87s/it, loss=-21.7505, speed=10.16s/iter, memory=83MB]Epoch 1/5:   1%|          | 26/3867 [04:33<10:31:46,  9.87s/it, loss=-21.3050, speed=10.16s/iter, memory=82MB]Epoch 1/5:   1%|          | 27/3867 [04:33<10:38:40,  9.98s/it, loss=-21.3050, speed=10.16s/iter, memory=82MB]Epoch 1/5:   1%|          | 27/3867 [04:42<10:38:40,  9.98s/it, loss=-21.7591, speed=10.15s/iter, memory=82MB]Epoch 1/5:   1%|          | 28/3867 [04:42<10:36:45,  9.95s/it, loss=-21.7591, speed=10.15s/iter, memory=82MB]Epoch 1/5:   1%|          | 28/3867 [04:52<10:36:45,  9.95s/it, loss=-21.8966, speed=10.14s/iter, memory=83MB]Epoch 1/5:   1%|          | 29/3867 [04:52<10:36:35,  9.95s/it, loss=-21.8966, speed=10.14s/iter, memory=83MB]Epoch 1/5:   1%|          | 29/3867 [05:02<10:36:35,  9.95s/it, loss=-21.2652, speed=10.13s/iter, memory=83MB]Epoch 1/5:   1%|          | 30/3867 [05:02<10:34:22,  9.92s/it, loss=-21.2652, speed=10.13s/iter, memory=83MB]Epoch 1/5:   1%|          | 30/3867 [05:12<10:34:22,  9.92s/it, loss=-21.5881, speed=10.12s/iter, memory=83MB]Epoch 1/5:   1%|          | 31/3867 [05:12<10:32:29,  9.89s/it, loss=-21.5881, speed=10.12s/iter, memory=83MB]Epoch 1/5:   1%|          | 31/3867 [05:22<10:32:29,  9.89s/it, loss=-20.9937, speed=10.11s/iter, memory=82MB]Epoch 1/5:   1%|          | 32/3867 [05:22<10:31:13,  9.88s/it, loss=-20.9937, speed=10.11s/iter, memory=82MB]Epoch 1/5:   1%|          | 32/3867 [05:32<10:31:13,  9.88s/it, loss=-21.0543, speed=10.10s/iter, memory=83MB]Epoch 1/5:   1%|          | 33/3867 [05:32<10:27:08,  9.81s/it, loss=-21.0543, speed=10.10s/iter, memory=83MB]Epoch 1/5:   1%|          | 33/3867 [05:42<10:27:08,  9.81s/it, loss=-20.8855, speed=10.09s/iter, memory=82MB]Epoch 1/5:   1%|          | 34/3867 [05:42<10:28:43,  9.84s/it, loss=-20.8855, speed=10.09s/iter, memory=82MB]Epoch 1/5:   1%|          | 34/3867 [05:51<10:28:43,  9.84s/it, loss=-21.3588, speed=10.09s/iter, memory=84MB]Epoch 1/5:   1%|          | 35/3867 [05:51<10:29:04,  9.85s/it, loss=-21.3588, speed=10.09s/iter, memory=84MB]Epoch 1/5:   1%|          | 35/3867 [06:01<10:29:04,  9.85s/it, loss=-21.6501, speed=10.08s/iter, memory=83MB]Epoch 1/5:   1%|          | 36/3867 [06:01<10:30:16,  9.87s/it, loss=-21.6501, speed=10.08s/iter, memory=83MB]Epoch 1/5:   1%|          | 36/3867 [06:11<10:30:16,  9.87s/it, loss=-21.3171, speed=10.07s/iter, memory=82MB]Epoch 1/5:   1%|          | 37/3867 [06:11<10:28:16,  9.84s/it, loss=-21.3171, speed=10.07s/iter, memory=82MB]

@@ -1,0 +1,81 @@
+------------ Options -------------
+anormly_ratio: 4.0
+batch_size: 1024
+d_ff: 512
+d_model: 512
+data_path: ./dataset/SWaT
+dataset: SWaT
+dynamic_graph: True
+e_layers: 3
+fusion_method: weighted
+gnn_heads: 4
+gnn_hidden: 256
+gnn_layers: 2
+gnn_type: gatv2
+input_c: 51
+k: 3
+k_neighbors: 5
+lr: 0.0001
+mode: train
+model_save_path: ./checkpoints
+model_type: advanced_transgnn
+n_heads: 8
+num_epochs: 10
+output_c: 51
+pretrained_model: None
+residual: True
+win_size: 100
+-------------- End ----------------
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+======================TRAIN MODE======================
+Traceback (most recent call last):
+  File "main.py", line 89, in <module>
+    main(config)
+  File "main.py", line 35, in main
+    solver.train()  # 执行训练
+  File "/root/autodl-tmp/Anomaly-Transformer-main/solver.py", line 216, in train
+    output, series, prior, _ = self.model(input)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AdvancedAnomalyTransGNN.py", line 98, in forward
+    trans_out, series, prior, sigmas = self.transformer(x)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AnomalyTransformer.py", line 133, in forward
+    enc_out, series, prior, sigmas = self.encoder(enc_out)  # 编码器处理
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AnomalyTransformer.py", line 73, in forward
+    x, series, prior, sigma = attn_layer(x, attn_mask=attn_mask)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AnomalyTransformer.py", line 38, in forward
+    new_x, attn, mask, sigma = self.attention(
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/attn.py", line 146, in forward
+    out, series, prior, sigma = self.inner_attention(
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/attn.py", line 84, in forward
+    i_matrix = torch.arange(window_size, device=queries.device).view(1, 1, -1, 1).repeat(B, H, 1, window_size)
+RuntimeError: CUDA out of memory. Tried to allocate 626.00 MiB (GPU 0; 23.59 GiB total capacity; 13.48 GiB already allocated; 126.69 MiB free; 13.64 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

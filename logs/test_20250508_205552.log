@@ -1,0 +1,38 @@
+------------ Options -------------
+anormly_ratio: 4.0
+batch_size: 256
+d_ff: 64
+d_model: 64
+data_path: ./dataset/SWaT
+dataset: SWaT
+dynamic_graph: True
+e_layers: 1
+fusion_method: weighted
+gnn_heads: 2
+gnn_hidden: 32
+gnn_layers: 1
+gnn_type: gatv2
+input_c: 51
+k: 3
+k_neighbors: 2
+lr: 0.0001
+mode: test
+model_save_path: ./checkpoints
+model_type: advanced_transgnn
+n_heads: 2
+num_epochs: 10
+output_c: 51
+pretrained_model: None
+residual: True
+win_size: 30
+-------------- End ----------------
+Traceback (most recent call last):
+  File "main.py", line 89, in <module>
+    main(config)
+  File "main.py", line 31, in main
+    solver = Solver(vars(config))
+  File "/root/autodl-tmp/Anomaly-Transformer-main/solver.py", line 73, in __init__
+    self.train_loader = get_loader_segment(
+  File "/root/autodl-tmp/Anomaly-Transformer-main/data_factory/data_loader.py", line 342, in get_loader_segment
+    dataset = SWaTSegLoader(data_path, win_size=win_size, mode=mode)
+TypeError: __init__() missing 1 required positional argument: 'step'

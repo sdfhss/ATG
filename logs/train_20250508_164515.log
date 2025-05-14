@@ -1,0 +1,79 @@
+------------ Options -------------
+anormly_ratio: 4.0
+batch_size: 1024
+d_ff: 512
+d_model: 512
+data_path: ./dataset/SWaT
+dataset: SWaT
+dynamic_graph: True
+e_layers: 3
+fusion_method: weighted
+gnn_heads: 4
+gnn_hidden: 256
+gnn_layers: 2
+gnn_type: gatv2
+input_c: 38
+k: 3
+k_neighbors: 5
+lr: 0.0001
+mode: train
+model_save_path: ./checkpoints
+model_type: advanced_transgnn
+n_heads: 8
+num_epochs: 10
+output_c: 38
+pretrained_model: None
+residual: True
+win_size: 100
+-------------- End ----------------
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+======================TRAIN MODE======================
+Traceback (most recent call last):
+  File "main.py", line 89, in <module>
+    main(config)
+  File "main.py", line 35, in main
+    solver.train()  # 执行训练
+  File "/root/autodl-tmp/Anomaly-Transformer-main/solver.py", line 216, in train
+    output, series, prior, _ = self.model(input)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AdvancedAnomalyTransGNN.py", line 98, in forward
+    trans_out, series, prior, sigmas = self.transformer(x)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AnomalyTransformer.py", line 132, in forward
+    enc_out = self.embedding(x)  # 数据嵌入
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/embed.py", line 95, in forward
+    x = self.value_embedding(x) + self.position_embedding(x)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/embed.py", line 67, in forward
+    x = self.tokenConv(x.permute(0, 2, 1)).transpose(1, 2)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 301, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 294, in _conv_forward
+    return F.conv1d(F.pad(input, self._reversed_padding_repeated_twice, mode=self.padding_mode),
+RuntimeError: Given groups=1, weight of size [512, 38, 3], expected input[1024, 51, 102] to have 38 channels, but got 51 channels instead

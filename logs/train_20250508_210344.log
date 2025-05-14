@@ -1,0 +1,76 @@
+------------ Options -------------
+anormly_ratio: 4.0
+batch_size: 64
+d_ff: 64
+d_model: 64
+data_path: ./dataset/SWaT
+dataset: SWaT
+dynamic_graph: True
+e_layers: 1
+fusion_method: weighted
+gnn_heads: 1
+gnn_hidden: 64
+gnn_layers: 1
+gnn_type: gatv2
+input_c: 51
+k: 3
+k_neighbors: 2
+lr: 0.0001
+mode: train
+model_save_path: ./checkpoints
+model_type: advanced_transgnn
+n_heads: 2
+num_epochs: 5
+output_c: 51
+pretrained_model: None
+residual: True
+win_size: 30
+-------------- End ----------------
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+======================TRAIN MODE======================
+预热GPU...
+Traceback (most recent call last):
+  File "main.py", line 89, in <module>
+    main(config)
+  File "main.py", line 35, in main
+    solver.train()  # 执行训练
+  File "/root/autodl-tmp/Anomaly-Transformer-main/solver.py", line 238, in train
+    _ = self.model(dummy_input)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AdvancedAnomalyTransGNN.py", line 103, in forward
+    gnn_out, edge_index, edge_weight, gnn_attn = self.gnn(x)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/advanced_gnn.py", line 344, in forward
+    attn_scores = self.attention(h)  # [B*L, 1]
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/functional.py", line 1848, in linear
+    return torch._C._nn.linear(input, weight, bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (30x64 and 51x25)

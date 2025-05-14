@@ -1,0 +1,50 @@
+------------ Options -------------
+anormly_ratio: 4.0
+batch_size: 256
+d_ff: 256
+d_model: 256
+data_path: ./dataset/SWaT
+dataset: SWaT
+dynamic_graph: True
+e_layers: 3
+fusion_method: weighted
+gnn_heads: 4
+gnn_hidden: 128
+gnn_layers: 2
+gnn_type: gatv2
+input_c: 51
+k: 3
+k_neighbors: 5
+lr: 0.0001
+mode: test
+model_save_path: ./checkpoints
+model_type: advanced_transgnn
+n_heads: 8
+num_epochs: 10
+output_c: 51
+pretrained_model: None
+residual: True
+win_size: 50
+-------------- End ----------------
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+错误：找不到模型文件 ./checkpoints/SWaT_checkpoint.pth
+请先运行训练模式生成模型文件。

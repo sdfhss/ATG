@@ -1,0 +1,119 @@
+------------ Options -------------
+anormly_ratio: 4.0
+batch_size: 1024
+d_ff: 512
+d_model: 512
+data_path: ./dataset/SWaT
+dataset: SWaT
+dynamic_graph: True
+e_layers: 3
+fusion_method: weighted
+gnn_heads: 4
+gnn_hidden: 256
+gnn_layers: 2
+gnn_type: gatv2
+input_c: 51
+k: 3
+k_neighbors: 5
+lr: 0.0001
+mode: train
+model_save_path: ./checkpoints
+model_type: advanced_transgnn
+n_heads: 8
+num_epochs: 10
+output_c: 51
+pretrained_model: None
+residual: True
+win_size: 100
+-------------- End ----------------
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+AdvancedAnomalyGNN初始化 - in_channels: 51, hidden_channels: 256, out_channels: 51
+GATv2Layer初始化 - in_channels: 51, out_channels: 256, heads: 4
+GATv2Layer初始化 - in_channels: 1024, out_channels: 51, heads: 4
+======================TRAIN MODE======================
+预热GPU...
+AdvancedAnomalyGNN输入 - 形状: torch.Size([1, 100, 51]), 通道数: 51
+展平后的输入 - 形状: torch.Size([100, 51])
+GATv2Layer输入 - x: torch.Size([100, 51]), edge_index: torch.Size([2, 100])
+GATv2Layer卷积后 - out: torch.Size([100, 1024])
+GATv2Layer输入 - x: torch.Size([100, 1024]), edge_index: torch.Size([2, 100])
+GATv2Layer卷积后 - out: torch.Size([100, 51])
+GNN编码器输出 - 形状: torch.Size([100, 51])
+注意力分数 - 形状: torch.Size([100, 1])
+最终输出 - 形状: torch.Size([100, 51])
+AdvancedAnomalyGNN输入 - 形状: torch.Size([1, 100, 51]), 通道数: 51
+展平后的输入 - 形状: torch.Size([100, 51])
+GATv2Layer输入 - x: torch.Size([100, 51]), edge_index: torch.Size([2, 100])
+GATv2Layer卷积后 - out: torch.Size([100, 1024])
+GATv2Layer输入 - x: torch.Size([100, 1024]), edge_index: torch.Size([2, 100])
+GATv2Layer卷积后 - out: torch.Size([100, 51])
+GNN编码器输出 - 形状: torch.Size([100, 51])
+注意力分数 - 形状: torch.Size([100, 1])
+最终输出 - 形状: torch.Size([100, 51])
+AdvancedAnomalyGNN输入 - 形状: torch.Size([1, 100, 51]), 通道数: 51
+展平后的输入 - 形状: torch.Size([100, 51])
+GATv2Layer输入 - x: torch.Size([100, 51]), edge_index: torch.Size([2, 100])
+GATv2Layer卷积后 - out: torch.Size([100, 1024])
+GATv2Layer输入 - x: torch.Size([100, 1024]), edge_index: torch.Size([2, 100])
+GATv2Layer卷积后 - out: torch.Size([100, 51])
+GNN编码器输出 - 形状: torch.Size([100, 51])
+注意力分数 - 形状: torch.Size([100, 1])
+最终输出 - 形状: torch.Size([100, 51])
+
+开始第 1/10 轮训练
+总批次数: 484
+Epoch 1/10:   0%|          | 0/484 [00:00<?, ?it/s]Epoch 1/10:   0%|          | 0/484 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 89, in <module>
+    main(config)
+  File "main.py", line 35, in main
+    solver.train()  # 执行训练
+  File "/root/autodl-tmp/Anomaly-Transformer-main/solver.py", line 281, in train
+    fused_features, anomaly_score, series, prior, sigmas, edge_index, edge_weight = self.model(input)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AdvancedAnomalyTransGNN.py", line 98, in forward
+    trans_out, series, prior, sigmas = self.transformer(x)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AnomalyTransformer.py", line 133, in forward
+    enc_out, series, prior, sigmas = self.encoder(enc_out)  # 编码器处理
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AnomalyTransformer.py", line 73, in forward
+    x, series, prior, sigma = attn_layer(x, attn_mask=attn_mask)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AnomalyTransformer.py", line 38, in forward
+    new_x, attn, mask, sigma = self.attention(
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/attn.py", line 146, in forward
+    out, series, prior, sigma = self.inner_attention(
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/attn.py", line 85, in forward
+    j_matrix = torch.arange(window_size, device=queries.device).view(1, 1, 1, -1).repeat(B, H, window_size, 1)
+RuntimeError: CUDA out of memory. Tried to allocate 626.00 MiB (GPU 0; 23.59 GiB total capacity; 2.44 GiB already allocated; 432.06 MiB free; 2.56 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/threading.py", line 932, in _bootstrap_inner

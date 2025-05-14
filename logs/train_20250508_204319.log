@@ -1,0 +1,73 @@
+------------ Options -------------
+anormly_ratio: 4.0
+batch_size: 512
+d_ff: 256
+d_model: 256
+data_path: ./dataset/SWaT
+dataset: SWaT
+dynamic_graph: True
+e_layers: 2
+fusion_method: weighted
+gnn_heads: 4
+gnn_hidden: 128
+gnn_layers: 2
+gnn_type: gatv2
+input_c: 51
+k: 3
+k_neighbors: 5
+lr: 0.0001
+mode: train
+model_save_path: ./checkpoints
+model_type: advanced_transgnn
+n_heads: 8
+num_epochs: 5
+output_c: 51
+pretrained_model: None
+residual: True
+win_size: 50
+-------------- End ----------------
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+训练数据特征数量: 51
+测试数据特征数量: 50
+已填充测试数据至 51 个特征
+test: (495000, 51)
+train: (495000, 51)
+======================TRAIN MODE======================
+预热GPU...
+
+开始第 1/5 轮训练
+总批次数: 967
+Traceback (most recent call last):
+  File "main.py", line 89, in <module>
+    main(config)
+  File "main.py", line 35, in main
+    solver.train()  # 执行训练
+  File "/root/autodl-tmp/Anomaly-Transformer-main/solver.py", line 242, in train
+    fused_features, anomaly_score, series, prior, sigmas, edge_index, edge_weight = self.model(input)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/AdvancedAnomalyTransGNN.py", line 103, in forward
+    gnn_out, edge_index, edge_weight, gnn_attn = self.gnn(x)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/advanced_gnn.py", line 322, in forward
+    edge_index, edge_weight = self.graph_constructor(x)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/autodl-tmp/Anomaly-Transformer-main/model/advanced_gnn.py", line 42, in forward
+    similarity = similarity / (norm + 1e-8)
+RuntimeError: CUDA out of memory. Tried to allocate 1.22 GiB (GPU 0; 23.59 GiB total capacity; 4.92 GiB already allocated; 953.38 MiB free; 5.77 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

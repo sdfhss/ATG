@@ -1,0 +1,50 @@
+------------ Options -------------
+anormly_ratio: 1.0
+batch_size: 128
+d_ff: 64
+d_model: 64
+data_path: /root/autodl-tmp/Anomaly-Transformer-main/dataset/MSL
+dataset: MSL
+dynamic_graph: True
+e_layers: 1
+fusion_method: weighted
+gnn_heads: 1
+gnn_hidden: 32
+gnn_layers: 1
+gnn_type: gatv2
+input_c: 55
+k: 3
+k_neighbors: 3
+lr: 5e-05
+mode: test
+model_save_path: /root/autodl-tmp/Anomaly-Transformer-main/checkpoints
+model_type: advanced_transgnn
+n_heads: 2
+no_time_limit: True
+num_epochs: 10
+output_c: 55
+pretrained_model: 20
+residual: True
+win_size: 50
+-------------- End ----------------
+自动调整batch_size: 128 -> 1024 (GPU内存: 23.59GB可用)
+当前GPU利用率: 0.00%，目标提高到60-80%
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+检测到大显存GPU (23.6GB)，自动优化模型参数
+已强制启用自动混合精度训练，提高GPU利用率
+使用单GPU训练 - RTX 3090
+模型总参数量: 3.74M 参数
+初始GPU内存分配: 0.03GB
+初始GPU内存预留: 0.04GB
+已设置GPU内存使用上限为95%
+CUDA性能优化设置完成，已针对RTX 3090进行优化
+模型加载失败: local variable 'torch' referenced before assignment
+尝试使用兼容模式加载模型...
+测试过程中发生错误：local variable 'torch' referenced before assignment
